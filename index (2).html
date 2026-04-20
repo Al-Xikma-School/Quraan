@@ -207,7 +207,6 @@
             if (horay_u_jiray) {
                 alert("❌ Hore ayaad isugu xaadirisay " + shift + " maanta hal mar ayaa laguu ogol yahay maalintii!");
             } else {
-                // Halkan waxaa lagu daray inuu aqoonsado UNIQUE ID-ga fariinta
                 const newRecordRef = db.ref('attendance').push();
                 const uniqueId = newRecordRef.key;
 
@@ -217,7 +216,6 @@
                     shift: shift,
                     time: firebase.database.ServerValue.TIMESTAMP
                 }).then(() => {
-                    // Muuji shaashadda sugitaanka
                     document.getElementById('mainContainer').innerHTML = `
                         <div class="success-msg">
                             <h1 id="status-icon">⏳</h1>
@@ -228,7 +226,6 @@
                             <p id="timer">Boggu wuxuu iskiis u xirmi doonaa...</p>
                         </div>`;
 
-                    // Dhagayso Firebase ilaa Google Sheets uu ka soo diro "display_msg"
                     db.ref('attendance/' + uniqueId).on('value', (snapshot) => {
                         const data = snapshot.val();
                         if (data && data.display_msg) {
