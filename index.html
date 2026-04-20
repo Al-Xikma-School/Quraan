@@ -93,7 +93,7 @@
         const data = snapshot.val();
         if (data) {
             SETTINGS = data;
-            document.getElementById('displaySchoolName').innerText = SETTINGS.school_name || "AL XIKMA SCHOOL";
+            document.getElementById('displaySchoolName').innerText = SETTINGS.school_name || " مدرسة دار الأرقم ";
             startGPSWatch();
         }
     });
@@ -205,7 +205,7 @@
             });
 
             if (horay_u_jiray) {
-                alert("❌ Hore ayaad isugu xaadirisay " + shift + " maanta hal mar ayaa laguu ogol yahay maalintii!");
+                alert("❌ Horey ayaad isugu xaadirisay " + shift + " maanta. Ustaad hal mar ayaa laguu ogol yahay maalintii!");
             } else {
                 const newRecordRef = db.ref('attendance').push();
                 const uniqueId = newRecordRef.key;
@@ -220,7 +220,7 @@
                         <div class="success-msg">
                             <h1 id="status-icon">⏳</h1>
                             <p><strong>${name}</strong></p>
-                            <p id="dynamic-msg">Fariintaada waa la xisaabinayaa...</p>
+                            <p id="dynamic-msg"> Fadlan hal daqiiqo sug jawaabta Email-kaagana ka fiirso...</p>
                             <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
                             <p style="font-size: 12px; color: #666;">${SETTINGS.footer_text || ""}</p>
                             <p id="timer">Boggu wuxuu iskiis u xirmi doonaa...</p>
