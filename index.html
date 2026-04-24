@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AL XIKMA SCHOOL - Attendance</title>
+    <title>Dugsiga DaaruL Arqam - Attendance</title>
     <style>
         /* Midabka dhabarka (Background) oo cagaar khafif ah */
         body { 
@@ -48,7 +48,7 @@
 <div class="container" id="mainContainer">
     <img src="10754.jpg" alt="Logo" class="logo">
     
-    <h2 id="displaySchoolName"> مدرسة دار الأرقم </h2>
+    <h2 id="displaySchoolName"> Dugsiga Daarul Arqam </h2>
     <p>Xaadirinta Macalimiinta</p>
 
     <select id="nameSelect">
@@ -66,7 +66,7 @@
     <input type="password" id="passInput" placeholder="Gali Password-kaaga">
 
     <button id="submitBtn" class="btn submit-btn" disabled>Hubinta Goobta...</button>
-    <div id="status">Sugaya GPS-ka iyo Settings...</div>
+    <div id="status"> Fadlan furo Location-ka .</div>
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -93,7 +93,7 @@
         const data = snapshot.val();
         if (data) {
             SETTINGS = data;
-            document.getElementById('displaySchoolName').innerText = SETTINGS.school_name || " مدرسة دار الأرقم ";
+            document.getElementById('displaySchoolName').innerText = SETTINGS.school_name || " Dugsiga Daarul Arqam ";
             startGPSWatch();
         }
     });
